@@ -13,8 +13,7 @@ type MinuteAdapter struct {
 	ticker *time.Ticker
 }
 func (this *MinuteAdapter)Init()error{
-	//this.timeStep = 60 * time.Second
-	this.timeStep = 1 * time.Second
+	this.timeStep = 60 * time.Second
 	this.formatSequence = []uint{MINUTE, HOUR, DAY, MONTH, WEEK}
 	this.ticker = time.NewTicker(this.timeStep)
 	return nil
