@@ -73,6 +73,9 @@ func (this *Crontab) Reset() {
 		return true
 	})
 }
+func (this *Crontab) List() *sync.Map {
+	return this.tasks
+}
 func (this *Crontab) Unregister(id string) {
 	this.tasks.Delete(id)
 }
